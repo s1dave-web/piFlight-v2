@@ -28,3 +28,16 @@ Without internet on the Pi, download the `piflight-update-<version>.pfu` file fr
 
 Updates are signed: a piFlight device only installs files made with the piFlight release key. Re-flashing
 an SD card with a newer image also works, but you then have to set the device up again.
+
+## Privacy and remote access
+- **There is no shared or hidden login.** SSH is off, and the Pi's user account has no password until you
+  choose one. Nobody else, including the piFlight author, can log in to your device.
+- To use SSH yourself: dashboard → **Remote access & diagnostics → Manage SSH**. Choose a password, optionally
+  add your public key and refuse password logins ("Keys only"). Switch it off again on the same page.
+- **Need help?** Use **Download diagnostics** on the same card and send the text file to whoever is helping you.
+  It contains versions, temperature, service status and recent logs. Wi-Fi names and passwords, API keys and
+  your location are left out, and you can read the whole file before you send it.
+- What the Pi connects to on the internet: FlightRadar24 (flight data for your area), the weather provider you
+  chose (Open-Meteo by default), time servers (pool.ntp.org, Cloudflare, Google), a ping to 8.8.8.8 / 1.1.1.1
+  to check the internet is up, and GitHub, only when you click *Check for update*. No usage data is collected.
+  The dashboard page loads its map tiles and two scripts straight into your browser.
