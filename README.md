@@ -23,11 +23,15 @@ how high it is and how fast. Between planes, it shows the time and the weather.<
 
 | <img src="assets/screen-flight.png" alt="Flight screen: Glasgow to Belfast, 21,000 ft, 416 knots" width="400"> | <img src="assets/screen-weather.png" alt="Clock with today's weather and a three-day forecast" width="400"> |
 |:---:|:---:|
-| **A plane overhead.** Route and distances, altitude with climb or descent, speed and heading, airline and aircraft, and its arrival time against the schedule | **The clock.** Time, date, temperature and a three-day forecast with pixel-art weather icons |
+| **A plane overhead.** Route and distances, altitude with climb or descent, speed and heading, airline and aircraft (and, with Flightradar24, its arrival time against the schedule) | **The clock.** Time, date, temperature and a three-day forecast with pixel-art weather icons |
 | <img src="assets/screen-night-clock.png" alt="Night clock in purple with the moon phase" width="400"> | <img src="assets/screen-clock.png" alt="Clock showing humidity" width="400"> |
-| **At night.** The clock turns purple from sunset to sunrise and the brightness drops. The corner shows the moon's phase. | **Humidity.** Every 10 seconds the corner swaps between temperature and humidity |
+| **At night.** The clock changes colour through the day (pick from four schemes) and the brightness drops at night. The corner shows the moon's phase. | **Humidity.** Every 10 seconds the corner swaps between temperature and humidity |
 
 There are two display styles. **Modern** shows still pages with hand-drawn airline logos. **Classic** shows scrolling text.
+
+**Flight data** comes from free open networks, [adsb.lol](https://adsb.lol) and [adsb.fi](https://adsb.fi), taking turns so
+piFlight checks about every 45 seconds with no key, and backing each other up. You can also use your own ADS-B
+receiver on your home network (readsb, dump1090, PiAware or tar1090), or your own Flightradar24 API key.
 You can switch between them in the dashboard.
 
 ## The dashboard
@@ -105,7 +109,8 @@ an SD card with a newer image also works, but you then have to set the device up
   no IP addresses. You can switch it off any time in Settings. The counter's code is at
   [piflight-counter](https://github.com/s1dave-web/piflight-counter).
 - **What the Pi connects to:**
-  - FlightRadar24, for flight data in your area;
+  - the flight data sources you tick (adsb.lol, adsb.fi, your own receiver, or Flightradar24), for planes in your
+    area, and adsb.lol's route files and adsbdb.com for routes and aircraft details;
   - your weather provider;
   - time servers (pool.ntp.org, Cloudflare, Google);
   - a ping to 8.8.8.8 / 1.1.1.1, to check the internet is up;
@@ -116,4 +121,4 @@ an SD card with a newer image also works, but you then have to set the device up
 
 ---
 
-<sub>piFlight isn't affiliated with FlightRadar24 or any airline. Airline names and logos belong to their owners.</sub>
+<sub>piFlight isn't affiliated with adsb.lol, adsb.fi, Flightradar24 or any airline. Airline names and logos belong to their owners.</sub>
