@@ -15,7 +15,7 @@ how high it is and how fast. Between planes, it shows the time and the weather.<
   <img alt="Updates" src="https://img.shields.io/badge/updates-signed-2ea44f">
 </p>
 
-<p align="center"><img src="assets/piflight-hero.jpg" alt="A navy piFlight on a desk showing the clock and a three-day forecast" width="820"></p>
+<p align="center"><img src="assets/piflight-hero.jpg" alt="An orange piFlight on a desk showing the clock and a three-day forecast" width="820"></p>
 
 ## What it shows
 
@@ -58,11 +58,16 @@ Everything is set up from a phone or computer, at **http://piflight.local**:
 
 ## Colours
 
-<p align="center"><img src="assets/piflight-colours.jpg" alt="piFlight cases in matte white, light grey, charcoal, navy blue, burnt orange and mustard" width="820"></p>
+> **Not on sale yet.** Ready-made piFlights may be offered later, but nothing is confirmed: there's no shop,
+> price or date. For now piFlight is a do-it-yourself project, and everything you need to build one is here.
 
-The case is 3D-printed in matte white, light grey, charcoal, navy blue, burnt orange or mustard.
-There's a 3D model of the navy case in [`assets/piflight-navy.glb`](assets/piflight-navy.glb). You can open it in
-Windows 3D Viewer, Blender or any glTF viewer online.
+<p align="center"><img src="assets/piflight-colours.jpg" alt="piFlight cases in the 13 Soleyin Ultra PLA colours" width="820"></p>
+
+The case is designed to be 3D-printed in Creality's **Soleyin Ultra PLA**. The pictures show its 13 shades:
+Ocean Blue, Matte Moonstone, Matte Fluonte, Light Green, Greenery, Pineapple Yellow, Rosehip, Strawberry Milk,
+Matte Rose Stone, Almond Purple, Matte White, Matte Grey and Matte Black. They're computer renders; real
+filament can look a little different. There's a 3D model of the Rosehip case in [`assets/piflight.glb`](assets/piflight.glb).
+You can open it in Windows 3D Viewer, Blender or any glTF viewer online.
 
 ## Get started
 
