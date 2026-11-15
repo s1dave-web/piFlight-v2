@@ -21,18 +21,29 @@ how high it is and how fast. Between planes, it shows the time and the weather.<
 
 <p align="center"><img src="assets/piflight-screens.webp" alt="piFlight cycling through its screens" width="720"></p>
 
-| <img src="assets/screen-flight.png" alt="Flight screen: Glasgow to Belfast, 21,000 ft, 416 knots" width="400"> | <img src="assets/screen-weather.png" alt="Clock with today's weather and a three-day forecast" width="400"> |
+| <img src="assets/screen-flight.png" alt="Flight screen: easyJet from Glasgow to Belfast, 21,000 ft and descending, 410 knots, south-west of you" width="400"> | <img src="assets/screen-weather.png" alt="Clock with today's weather and a three-day forecast" width="400"> |
 |:---:|:---:|
-| **A plane overhead.** Route and distances, altitude with climb or descent, speed and heading, airline and aircraft (and, with Flightradar24, its arrival time against the schedule) | **The clock.** Time, date, temperature and a three-day forecast with pixel-art weather icons |
-| <img src="assets/screen-night-clock.png" alt="Night clock in purple with the moon phase" width="400"> | <img src="assets/screen-clock.png" alt="Clock showing humidity" width="400"> |
-| **At night.** The clock changes colour through the day (pick from four schemes) and the brightness drops at night. The corner shows the moon's phase. | **Humidity.** Every 10 seconds the corner swaps between temperature and humidity |
+| **A plane overhead.** The airline's logo, the route and distances, then still pages: altitude with climb or descent, speed, and a little compass with a dot showing where to look | **The clock.** Time, date, temperature and a three-day forecast with pixel-art weather icons |
+| <img src="assets/screen-night-clock.png" alt="Night clock in lavender with the moon phase" width="400"> | <img src="assets/screen-clock.png" alt="Night clock showing humidity" width="400"> |
+| **At night.** The clock changes colour through the day (Sun arc, Calm or Sky) and the brightness drops at night. The corner shows the moon's phase. | **Humidity.** Every 10 seconds the corner swaps between temperature and humidity |
 
-There are two display styles. **Modern** shows still pages with hand-drawn airline logos. **Classic** shows scrolling text.
+**When a plane appears** it flies across the panel first, in its own shape (single-aisle, wide-body, jumbo,
+turboprop, regional or business jet) with its airline's colours on the tail, nose up when it's climbing and wheels
+down when it's landing. Then its details, a page at a time:
+- the flight number, aircraft, airline and route, with hand-drawn airline logos;
+- the height it has been cleared to ("to 7,000ft") when it's climbing or descending;
+- **when it passes closest** to you: "Passes 0.8mi / in 2 min";
+- from your own log: "Seen 14x / since 3 Oct" for regulars, "First A380 / in 12 days" for a rare visitor;
+- a plane squawking an emergency (7700, 7600, 7500) shows first, in red; military planes are marked;
+- the arrival time and whether it's on time, when a source with times is chosen.
+
+The same plane isn't shown again for 10 minutes (you can choose 5, 20, or every time), unless it declares an emergency.
 
 **Flight data** comes from free open networks, [adsb.lol](https://adsb.lol) and [adsb.fi](https://adsb.fi), taking turns so
 piFlight checks about every 45 seconds with no key, and backing each other up. You can also use your own ADS-B
 receiver on your home network (readsb, dump1090, PiAware or tar1090), or your own Flightradar24 API key.
-You can switch between them in the dashboard.
+The open networks and receivers don't know flight times, so you can add them from a second source: your
+Flightradar24 API key looks each new plane up once. You can switch all of this in the dashboard.
 
 ## The dashboard
 
@@ -40,7 +51,9 @@ Everything is set up from a phone or computer, at **http://piflight.local**:
 - **Home:** a live picture of the panel, its log, and a power test for checking your power supply.
 - **Zone:** drop a pin on your home and choose how far around it to look.
 - **Stats:** the planes you've seen this week or month. It shows top airlines, aircraft, routes and airports, the time of day planes pass, and records.
-- **Settings:** the weather service (Open-Meteo by default), brightness by day and at night, a screen-off schedule, 12 or 24-hour time, and units.
+- **Settings:** where flight data and flight times come from, the plane fly-in, how soon the same plane can show
+  again, the weather service (Open-Meteo by default), brightness by day and at night, a screen-off schedule,
+  12 or 24-hour time, the clock's colours, and units.
 - **Wi-Fi**, **Software update** and **Remote access**.
 
 ## Colours
