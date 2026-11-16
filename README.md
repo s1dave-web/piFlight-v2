@@ -132,7 +132,8 @@ an SD card with a newer image also works, but you then have to set the device up
   - your weather provider;
   - time servers (pool.ntp.org, Cloudflare, Google);
   - a ping to 8.8.8.8 / 1.1.1.1, to check the internet is up;
-  - GitHub, only when you check for updates;
+  - GitHub, to see if there's a newer version: every 6 hours for the "update available" banner (you can switch it
+    off in Settings), and when you check for or install an update. Nothing about your piFlight is sent;
   - the counter, only if you said yes.
 
   The dashboard page loads its map tiles and two scripts straight into your browser.
